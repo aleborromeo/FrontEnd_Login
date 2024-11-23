@@ -1,0 +1,167 @@
+
+body {
+    background: white;
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.table-container {
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #133E87;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+table {
+    table-layout: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #dddddd;
+}
+
+th {
+    background-color: #133E87;
+    color: white;
+    font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+a {
+    text-decoration: none;
+    color: #133E87;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #fff;
+    background-color: #133E87;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.loader-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(150deg, #cbe1f4, #668aaa);
+    z-index: 5;
+}
+
+.loader {
+    --s: 10px;
+    width: calc(15 * var(--s));
+    height: calc(15 * var(--s));
+    display: grid;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    -webkit-mask: radial-gradient(50% 50%, #0000 calc(99% - 2 * var(--s)), #000 calc(101% - 2 * var(--s)));
+    mask: radial-gradient(50% 50%, #0000 calc(99% - 2 * var(--s)), #000 calc(101% - 2 * var(--s))); /* Agregar mask también */
+    animation: r 4s linear infinite;
+}
+
+.loader:before {
+    content: "";
+    background: conic-gradient(from 25deg, #133E87 25%, #F3F3E0 0 50%, #133E87 0 75%, #F3F3E0 0);
+    -webkit-mask: repeating-conic-gradient(#0000 0 25deg, #000 23% 25%),
+        radial-gradient(var(--s) at var(--s) 50%, #000 97%, #0000) left/calc(100% - 2 * var(--s)) 100% repeat-x,
+        radial-gradient(var(--s) at 50% var(--s), #000 97%, #0000) top / 100% calc(100% - 2 * var(--s)) repeat-y;
+    mask: repeating-conic-gradient(#0000 0 25deg, #000 23% 25%),
+        radial-gradient(var(--s) at var(--s) 50%, #000 97%, #0000) left/calc(100% - 2 * var(--s)) 100% repeat-x,
+        radial-gradient(var(--s) at 50% var(--s), #000 97%, #0000) top / 100% calc(100% - 2 * var(--s)) repeat-y; /* Agregar mask también */
+}
+
+@keyframes r {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.menu {
+    width: 250px;
+    background-color: #133E87;
+    color: white;
+    position: fixed;
+    height: 100%;
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 0 4px 6px #00000043;
+}
+
+.menu h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu ul li {
+    padding: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.menu ul li a:hover {
+    background-color: #133E87;
+}
+
+.menu ul li a.active {
+    background-color: #B9E5E8;
+    font-weight: bold;
+    color: #133E87;
+    border-radius: 20px;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.6));
+}
+
+.menu ul li a img {
+    margin-right: 10px;
+}
+
+.menu ul li a.active img {
+    filter: brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(1835%) hue-rotate(186deg) brightness(89%) contrast(93%);
+    transition: filter 0.3s ease;
+}

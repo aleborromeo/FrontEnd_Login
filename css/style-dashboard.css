@@ -1,0 +1,171 @@
+body {
+    background: #B9E5E8;
+    margin: 0;
+    height: 100vh;
+    position: relative;
+}
+
+.loader-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(150deg, #cbe1f4, #668aaa);
+    z-index: 5;
+  }
+  
+  .loader {
+    --s: 10px;
+    width: calc(15 * var(--s));
+    height: calc(15 * var(--s));
+    display: grid;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    -webkit-mask: radial-gradient(50% 50%, #0000 calc(99% - 2 * var(--s)), #000 calc(101% - 2 * var(--s)));
+    mask: radial-gradient(50% 50%, #0000 calc(99% - 2 * var(--s)), #000 calc(101% - 2 * var(--s))); /* Agregar mask también */
+    animation: r 4s linear infinite;
+  }
+  
+  .loader:before {
+    content: "";
+    background: conic-gradient(from 25deg, #133E87 25%, #F3F3E0 0 50%, #133E87 0 75%, #F3F3E0 0);
+    -webkit-mask: repeating-conic-gradient(#0000 0 25deg, #000 23% 25%),
+      radial-gradient(var(--s) at var(--s) 50%, #000 97%, #0000) left/calc(100% - 2 * var(--s)) 100% repeat-x,
+      radial-gradient(var(--s) at 50% var(--s), #000 97%, #0000) top / 100% calc(100% - 2 * var(--s)) repeat-y;
+    mask: repeating-conic-gradient(#0000 0 25deg, #000 23% 25%),
+      radial-gradient(var(--s) at var(--s) 50%, #000 97%, #0000) left/calc(100% - 2 * var(--s)) 100% repeat-x,
+      radial-gradient(var(--s) at 50% var(--s), #000 97%, #0000) top / 100% calc(100% - 2 * var(--s)) repeat-y; /* Agregar mask también */
+  }
+  
+  
+  @keyframes r {
+    to {
+      transform: rotate(1turn)
+    }
+  }
+
+.menu { 
+    width: 250px; 
+    background-color: #133E87; 
+    color: white; 
+    position: absolute; 
+    height: 100%; 
+    padding-top: 20px;
+    flex-direction: column; 
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 0 4px 6px #00000043; 
+}
+
+.menu h3 { 
+  text-align: center; 
+  margin-bottom: 20px; 
+  font-size: 40px;
+} 
+
+.menu ul { 
+    list-style-type: none; 
+    padding: 0; 
+    width: 100%;
+} 
+
+.menu ul li { 
+    padding: 10px; 
+    height: 40px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+} 
+
+.menu ul li a { 
+    color: white; 
+    text-decoration: none; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100%; 
+    width: 100%;
+} 
+
+.menu ul li a:hover { 
+    background-color: #133E87;
+} 
+.menu ul li a.active { 
+    background-color: #B9E5E8;
+    font-weight: bold;
+    color: #133E87;
+    border-radius: 20px;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.6));
+}
+
+.menu ul li a img { 
+    margin-right: 10px; 
+}
+
+.menu ul li a.active img {
+    filter: brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(1835%) hue-rotate(186deg) brightness(89%) contrast(93%);
+    transition: filter 0.3s ease;
+}
+
+
+
+.menu-store {
+    position: relative;
+    top: 10px;
+    left: 70px;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.6));
+}
+
+
+.contenido h3 {
+  position: relative;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  color: #133E87; 
+  margin: 0 0 40px 0; 
+  margin-left: 280px;
+  background-color: white;
+  width: 1150px;
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px #00000043; 
+}
+
+.contenido p {
+  position: relative;
+  margin: 0px 0 0 0; 
+  line-height: 1.6; 
+  font-size: 16px; 
+  color: #000000; 
+  margin-left: 280px;
+  background-color: white;
+  width: 1150px;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px #00000043;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.contenido p iframe{
+  position: relative;
+  line-height: 1.6; 
+  font-size: 16px; 
+  margin-left: 200px;
+  width: 1150px;
+  height: 540px;
+  text-align: center;
+  left: -100px;
+  outline: none; 
+  border: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+
+
