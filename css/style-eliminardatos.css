@@ -77,10 +77,8 @@ button::after {
     left: 0;
     z-index: -1;
     transition: all 0.4s;
-}
-  
-button::after {
     background-color: #133E87;
+
 }
   
 button:hover::after {
