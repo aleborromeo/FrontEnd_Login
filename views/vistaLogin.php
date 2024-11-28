@@ -1,10 +1,6 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
     function vistaLogin(){
-        if (!empty($mensaje)) {
-            echo $mensaje;
-        } else {
-
 ?>
 
 <!DOCTYPE html>
@@ -128,5 +124,5 @@
 </html>
 
 <?php
-}}
+}
 ?>
