@@ -108,15 +108,12 @@ body {
     transition: filter 0.3s ease;
 }
 
-
-
 .menu-store {
     position: relative;
     top: 10px;
     left: 70px;
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.6));
 }
-
 
 .contenido h3 {
   position: relative;
@@ -151,7 +148,7 @@ body {
   align-items: center; 
 }
 
-.contenido p iframe{
+iframe{
   position: relative;
   line-height: 1.6; 
   font-size: 16px; 
@@ -166,6 +163,3 @@ body {
   justify-content: center;
   align-items: center; 
 }
-
-
-
