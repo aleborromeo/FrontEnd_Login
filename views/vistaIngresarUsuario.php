@@ -22,5 +22,4 @@ function mostrarFormularioIngreso($mensaje = '') {
 ?>
 
 <link rel="stylesheet" href="<?php echo get_UrlBase('css/style-ingresardatos.css'); ?>">
-<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="<?php echo get_js('tiempoMensaje.js'); ?>"></script>

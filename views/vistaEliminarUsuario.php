@@ -1,3 +1,4 @@
+<p>
 <?php
 
     function mostrarFormularioEliminar($mensaje = '')
@@ -22,6 +23,7 @@
 <?php
     }
 ?>
+</p>
 
 <link rel="stylesheet" href="<?php echo htmlspecialchars(get_UrlBase('css/style-eliminardatos.css'), ENT_QUOTES, 'UTF-8'); ?>">
 <script src="<?php echo htmlspecialchars(get_js('tiempoMensaje.js'), ENT_QUOTES, 'UTF-8'); ?>"></script>

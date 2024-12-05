@@ -1,8 +1,3 @@
-<?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
-    function vistaLogin(){
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -88,7 +83,7 @@
             <div class="number-12">8</div>
         </div>
 
-
+        <div id="output"></div>
         <form action="/controllers/controladorLogin.php" method="POST" class="login-form" autocomplete="off">
             <h1 class="form-title">Ingreso de<br>Usuarios</h1>
 
@@ -102,7 +97,7 @@
                 <input type="password" name="txtpassword" id="txtpassword" placeholder="Ingresa tu contraseña" required>
             </div>
 
-            <div class="button-login">
+            <div class="button-login" id="login-submit">
                 <input type="submit" value="Ingresar">
             </div>
         </form>
@@ -118,11 +113,7 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="<?php echo get_UrlBase("js/loader.js") ?>"></script>
+    <script src="<?php echo get_js("cargaLoginDashboard.js") ?>"></script>
+    <script src="<?php echo get_js("loader.js") ?>"></script>
 </body>
 </html>
-
-<?php
-}
-?>

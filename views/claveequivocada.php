@@ -74,8 +74,7 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="<?php echo get_UrlBase("js/loader.js")?>"></script>
+    <script src="<?php echo get_js("loader.js")?>"></script>
     
 </body>
 </html>

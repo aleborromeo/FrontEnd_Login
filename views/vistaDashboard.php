@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
 ?>
 
 <!DOCTYPE html>
@@ -56,13 +56,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
     <div class="contenido">
         <div class="cuadro-titulo"></div>
         <?php
-        $opcion = $_GET["opcion"] ?? 'Inicio';
-        echo get_dashboard_content($opcion);
+            if (isset($contenido)){
+                echo $contenido;
+            } else {
+                echo "<h3>Bienvenido al Sistema</h3>";
+            }
         ?>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="<?php echo get_UrlBase("js/loader.js") ?>"></script>
+    <script src="<?php echo get_js("loader.js") ?>"></script>
 </body>
 </html>
 
