@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (alerta && alerta.textContent.trim() !== '') {
         alerta.classList.add('mostrar'); 
+        
         setTimeout(() => {
             alerta.classList.remove('mostrar'); 
             alerta.classList.add('ocultar'); 
@@ -10,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 alerta.style.display = 'none';
             }, 500); 
-        }, 5000); 
+        }, 2000); 
     }
 });
-
