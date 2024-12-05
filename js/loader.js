@@ -1,7 +1,8 @@
-window.onload = function(){
-    $('#loader').fadeOut();
-   // $('body').removeClass('hidden') es para el scrollbar
-   setTimeout(function() {
-    document.getElementById("#loader").style.display = "none"; 
-}, 10000); //
+window.onload = function() {
+    setTimeout(function() {
+        var loader = document.getElementById('loader');
+        if (loader) {
+            loader.style.display = 'none'; 
+        }
+    }, 1000);  
 }
