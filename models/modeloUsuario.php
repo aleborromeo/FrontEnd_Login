@@ -10,13 +10,13 @@
         }
 
         public function validarCredenciales($username) {
-            $query = "SELECT username, password FROM usuarios WHERE BINARY username = :username LIMIT 1";
+            $query = "SELECT username, password FROM usuarios WHERE username = :username LIMIT 1";
             $stmt = $this->conexion->prepare($query);
             $stmt->bindParam(':username', $username, PDO::PARAM_STR);
             $stmt->execute();
-            return $stmt->fetch(PDO::FETCH_ASSOC);
+            return $stmt->fetch(PDO::FETCH_ASSOC);  // Devuelve los datos del usuario si existe
         }
-
+        
         //debe haber un metodo para hacer select, insert, delete, update
 
         public function obtenerUsuarios(){
